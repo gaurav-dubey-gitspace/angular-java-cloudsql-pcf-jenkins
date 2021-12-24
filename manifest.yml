@@ -18,7 +18,7 @@ spec:
         app: angular-webapp
     spec:
       containers:
-      - image: gcr.io/staticweb-test/angular-webapp:v1
+      - image: gcr.io/testgcp-331810/angular-webapp:v1
         name: webapp
         imagePullPolicy: Always
         resources: {}

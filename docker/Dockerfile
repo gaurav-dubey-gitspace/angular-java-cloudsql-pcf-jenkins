@@ -1,8 +1,17 @@
 # Alpine Linux with OpenJDK JRE
-FROM openjdk:8-jre-alpine
+# FROM openjdk:8-jre-alpine
 
 # Copy war file
-COPY users-0.0.1-SNAPSHOT.jar /users.war
+# COPY users-0.0.2-SNAPSHOT.jar /users.war
 
 # run the app
-CMD ["/usr/bin/java", "-jar", "/users.war"]
+# CMD ["/usr/bin/java", "-jar", "/users.war"]
+
+# Alpine Linux with OpenJDK JRE
+FROM openjdk:11
+
+# Copy war file
+COPY users-0.0.2-SNAPSHOT.jar /users.war
+
+# run the app
+CMD ["java", "-jar", "/users.war"]

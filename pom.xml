@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository   -->
 	</parent>
 	<groupId>com.bbtutorials</groupId>
 	<artifactId>users</artifactId>
@@ -18,7 +18,51 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+    <!-- Here --> 	
+	<repositories>
+	  <repository>
+	    <id>sonatype-snapshots</id>
+	    <name>sonatype-snapshots</name>
+	    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+	    <snapshots>
+	      <enabled>true</enabled>
+	      <updatePolicy>always</updatePolicy>
+	    </snapshots>
+	    <releases>
+	      <updatePolicy>always</updatePolicy>
+	    </releases>
+	  </repository>
+	</repositories>
+<!-- Here --> 
+<!-- Here --> 
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>libraries-bom</artifactId>
+      <version>24.0.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+<!-- Here --> 
+
 	<dependencies>
+
+<!-- Hereeeeeeeeeeeeeeeeee -->
+		<dependency>
+		  <groupId>com.google.cloud</groupId>
+		  <artifactId>google-cloud-kms</artifactId>
+		</dependency>
+		<dependency>
+		   <groupId>com.google.cloud</groupId>
+		   <artifactId>google-cloud-storage</artifactId>
+		</dependency>
+
+        
+<!-- Hereeeeeeeeeeeeeeeeee -->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -58,6 +102,51 @@
 			<groupId>com.querydsl</groupId>
 			<artifactId>querydsl-jpa</artifactId>
 		</dependency>
+
+<!-- Here --> 
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+		  <groupId>com.google.crypto.tink</groupId>
+		  <artifactId>tink</artifactId>
+		  <version>1.6.1</version>
+		</dependency>
+<!-- Here --> 
+
+<!-- Here --> 
+
+
+		 <dependency>
+		    <groupId>com.google.crypto.tink</groupId>
+		    <artifactId>tink</artifactId>
+		    <version>HEAD-SNAPSHOT</version>
+		 </dependency>
+		 
+
+		  <dependency>
+		    <groupId>com.google.crypto.tink</groupId>
+		    <artifactId>tink-gcpkms</artifactId>
+		    <version>1.6.1</version>
+		  </dependency>
+		  
+		  <dependency>
+		    <groupId>com.google.cloud</groupId>
+		    <artifactId>google-cloud-kms</artifactId>
+		  </dependency>
+    
+	      <dependency>
+		      <groupId>com.google.truth</groupId>
+		      <artifactId>truth</artifactId>
+		      <version>1.1.3</version>
+		      <scope>test</scope>
+	   	 </dependency>
+		 
+
+<!-- Here --> 
 
 		<dependency>
 			<groupId>com.h2database</groupId>
