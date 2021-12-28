@@ -13,7 +13,7 @@ public class DecryptAsymmetric {
 
   public String decryptAsymmetric(String encodedCiphertext) throws IOException {
     // TODO(developer): Replace these variables before running the sample.
-    String projectId = "testgcp-331810";
+    String projectId = "gcpcoe-333707";
     String locationId = "global";
     String keyRingId = "ring1";
     String keyId = "test1-hsm-asymm";
