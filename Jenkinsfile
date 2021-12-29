@@ -11,9 +11,9 @@ pipeline {
 			}
 		}
 		
-		stage ('Deploy') {
+//		stage ('Deploy') {
 		
-			steps {
+//			steps {
 //				withCredentials([[$class          : 'UsernamePasswordMultiBinding',
 //                                  credentialsId   : 'PCF_LOGIN',
 //                                  usernameVariable: 'USERNAME',
@@ -22,7 +22,7 @@ pipeline {
 //                     sh 'cf login -a https://api.cf.us10.hana.ondemand.com -u $USERNAME -p $PASSWORD'
 //                     sh 'cf push'
  //               }
-			}
+//			}
 		
 		}
 		
