@@ -1,11 +1,9 @@
 ---
 applications:
 - name: sprinboot-application-cloudsql
-  env:
-    GOOGLE_APPLICATION_CREDENTIALS: "./sa-key/sa-pcf-kms-key.json"
   stack: cflinuxfs3
   routes:
-  - route: sprinboot-application-cloudsql-funny-giraffe-ka.cfapps.us10.hana.ondemand.com
+  - route: sprinboot-application-cloudsql.cfapps.us10.hana.ondemand.com
     protocol: http1
   processes:
   - type: task
